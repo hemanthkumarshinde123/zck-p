@@ -9,6 +9,12 @@
 		<commons-io>2.6</commons-io>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<packname>-${project.version}-FL-${maven.build.timestamp}</packname>
+		<sonar.host.url>http://3.111.214.49:9000/</sonar.host.url>
+		<sonar.login>admin</sonar.login>
+		<sonar.password>admin</sonar.password> 
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
 	</properties>
 	<packaging>war</packaging>
 	<name>The -since Project</name>
@@ -39,6 +45,7 @@
 			<url>https://mavensync.zkoss.org/maven2/</url>
 		</pluginRepository>
 	</pluginRepositories>
+	
 	<dependencies>
 		<dependency>
 			<groupId>org.zkoss.zk</groupId>
@@ -67,6 +74,21 @@
 			<version>${commons-io}</version>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+	
+	    <repository>
+	      <id>nexus</id>
+	      <name>Sterlite Technologies</name>
+	      <url>http://http://ec2-13-233-92-251.ap-south-1.compute.amazonaws.com:8081/repository/maven-releases/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name> Sterlite Technologies </name>
+	      <url>http://http://ec2-13-233-92-251.ap-south-1.compute.amazonaws.com:8081/repository/maven-snapshots/</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
