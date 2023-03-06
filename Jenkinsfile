@@ -20,7 +20,7 @@ stages{
 
   stage('CheckOutCode'){
     steps{
-    git credentialsId: 'S_Hemanth_kumar_git_credentials', url: 'https://github.com/hemanthkumarshinde123/test-nodejs-app.git'
+    git credentialsId: 'S_Hemanth_kumar_git_credentials', url: 'https://github.com/hemanthkumarshinde123/zck-p.git'
   }
   }
   
